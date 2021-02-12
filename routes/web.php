@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CommandController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +14,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+Route::get('/commands', [ CommandController::class, 'Home']);
+Route::get('/create', [CommandController::class, 'CreateCommand'])->name('CreateCommand');
+Route::post('/create', [CommandController::class, 'CreateCommandPost'])->name('CreateCommandPost');
+Route::get('/{command:id}', [ CommandController::class, 'UpdateCommand' ])->name('CommandEdit');
+Route::patch('/{command:id}', [ CommandController::class, 'UpdateCommandPost' ])->name("UpdateCommand");
+Route::delete('/{command:id}', [CommandController::class, 'DeleteCommand'])->name('DeleteCommand');
