@@ -5,4 +5,4 @@
 
 # On y trouve le CrUD qui permet de lister, créer, mettre à jour et supprimer une commande.
 
-# Les commandes sont aussi vérifier par un request qui vérifie la taille de l'input, que la commande soit unique et bien sur que la commande et sa description soit bien présentent.
+# Les commandes sont aussi vérifiées par un "request" qui vérifie la taille de l'input, que la commande soit unique et bien sur que la commande et sa description soit bien présentes.
